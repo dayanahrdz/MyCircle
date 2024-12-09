@@ -1,6 +1,8 @@
 package com.example.mycircle;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -42,36 +44,42 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        Fragment selectedFragment = null;
         int itemId = item.getItemId();
 
         if (itemId == R.id.nav_schedule) {
-            selectedFragment = new ScheduleFragment();
+            loadFragment(new ScheduleFragment());
         } else if (itemId == R.id.nav_day) {
-            selectedFragment = new DayViewFragment();
+            loadFragment(new DayViewFragment());
         } else if (itemId == R.id.nav_week) {
-            selectedFragment = new WeekViewFragment();
+            loadFragment(new WeekViewFragment());
         } else if (itemId == R.id.nav_month) {
-            selectedFragment = new MonthViewFragment();
+            loadFragment(new MonthViewFragment());
+        } else if (itemId == R.id.nav_location) {
+            Log.d("DashboardActivity", "Location menu item clicked");
+            Intent locationIntent = new Intent(this, LocationActivity.class);
+            Log.d("DashboardActivity", "Created Intent for LocationActivity");
+            startActivity(locationIntent);
+            Log.d("DashboardActivity", "Started LocationActivity");
+            return true;
         } else if (itemId == R.id.nav_add_friends) {
-            selectedFragment = new AddFriendsFragment();
+            loadFragment(new AddFriendsFragment());
         } else if (itemId == R.id.nav_groups) {
-            selectedFragment = new GroupsFragment();
+            loadFragment(new GroupsFragment());
         } else if (itemId == R.id.nav_contacts) {
-            selectedFragment = new ContactsFragment();
+            loadFragment(new ContactsFragment());
         } else if (itemId == R.id.nav_settings) {
-            selectedFragment = new SettingsFragment();
-        }
-
-        if (selectedFragment != null) {
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.fragment_container, selectedFragment)
-                    .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
-                    .commit();
+            loadFragment(new SettingsFragment());
         }
 
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void loadFragment(Fragment fragment) {
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragment_container, fragment)
+                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+                .commit();
     }
 
     @Override
@@ -83,5 +91,6 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
         }
     }
 }
+
 
 
