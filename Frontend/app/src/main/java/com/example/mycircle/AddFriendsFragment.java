@@ -19,4 +19,3 @@ public class AddFriendsFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_add_friends, container, false);
     }
 }
-
