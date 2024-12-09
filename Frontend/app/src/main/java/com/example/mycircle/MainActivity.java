@@ -5,17 +5,21 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 
 public class MainActivity extends AppCompatActivity {
     private static final int SPLASH_TIMEOUT = 2000;
+    public TextView getStartedButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button getStartedButton = findViewById(R.id.get_started_button);
+        getStartedButton = findViewById(R.id.btnGetStarted);
         getStartedButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -24,12 +28,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                findViewById(R.id.logo_layout).setVisibility(View.VISIBLE);
-                findViewById(R.id.get_started_button).setVisibility(View.VISIBLE);
-            }
-        }, SPLASH_TIMEOUT);
+//        new Handler().postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                findViewById(R.id.drawer_layout).setVisibility(View.VISIBLE);
+//                findViewById(R.id.btnGetStarted).setVisibility(View.VISIBLE);
+//            }
+//        }, SPLASH_TIMEOUT);
     }
 }
