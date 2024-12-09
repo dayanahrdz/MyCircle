@@ -19,4 +19,3 @@ public class WeekViewFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_week_view, container, false);
     }
 }
-
