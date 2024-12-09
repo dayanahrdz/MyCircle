@@ -11,6 +11,9 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
 
+    <string name="back_button_description">Go back</string>
+    <string name="location">Location</string>
+
     <string name="settings_title">Settings</string>
     <string name="schedule_title">Schedule</string>
     <string name="day_view_title">Day View</string>
@@ -20,4 +23,3 @@
     <string name="groups_title">Groups</string>
     <string name="contacts_title">Contacts</string>
 </resources>
-
