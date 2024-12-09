@@ -19,4 +19,3 @@ public class MonthViewFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_month_view, container, false);
     }
 }
-
