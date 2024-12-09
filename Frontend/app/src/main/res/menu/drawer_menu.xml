@@ -4,40 +4,46 @@
         <item
             android:id="@+id/nav_schedule"
             android:icon="@drawable/ic_schedule"
-            android:title="menu_schedule" />
+            android:title="schedule" />
         <item
             android:id="@+id/nav_day"
             android:icon="@drawable/ic_day"
-            android:title="menu_day" />
+            android:title="day" />
         <item
             android:id="@+id/nav_week"
             android:icon="@drawable/ic_week"
-            android:title="menu_week" />
+            android:title="week" />
         <item
             android:id="@+id/nav_month"
             android:icon="@drawable/ic_month"
-            android:title="menu_month" />
+            android:title="month" />
+        <item
+            android:id="@+id/nav_location"
+            android:icon="@drawable/ic_location"
+            android:title="location" />
         <item
             android:id="@+id/nav_add_friends"
             android:icon="@drawable/ic_add_friends"
-            android:title="menu_add_friends" />
+            android:title="friends" />
         <item
             android:id="@+id/nav_groups"
             android:icon="@drawable/ic_groups"
-            android:title="menu_groups" />
+            android:title="groups" />
         <item
             android:id="@+id/nav_contacts"
             android:icon="@drawable/ic_contacts"
-            android:title="menu_contacts" />
+            android:title="contacts" />
     </group>
 
-    <item android:title="menu_other">
+    <item android:title="other">
         <menu>
             <item
                 android:id="@+id/nav_settings"
                 android:icon="@drawable/ic_settings"
-                android:title="menu_settings" />
+                android:title="settings" />
         </menu>
     </item>
 </menu>
+
+
 
