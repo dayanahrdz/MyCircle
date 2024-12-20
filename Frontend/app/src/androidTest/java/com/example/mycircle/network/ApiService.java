@@ -7,13 +7,17 @@ import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 
+
+import com.example.mycircle.models.Group; // Example model class for group
+import com.example.mycircle.models.UserRequestBody; // Example model class for request body
+
 public interface ApiService {
 
     // Example of a GET request to fetch some data
-    @GET("api/groups") // Change to your desired backend endpoint
-    Call<List<YourModel>> getGroups(); // Replace YourModel with the corresponding data model class
+    @GET("api/groups") // Adjust the endpoint as needed
+    Call<List<Group>> getGroups(); // Replace with the appropriate model for your groups data
 
     // Example of a POST request to send data
-    @POST("api/users") // Change to your desired backend endpoint
-    Call<ResponseBody> createUser(@Body YourRequestBody body); // Replace YourRequestBody with the request data class
+    @POST("api/users") // Adjust the endpoint as needed
+    Call<Void> createUser(@Body UserRequestBody body); // Replace with your actual request body model
 }

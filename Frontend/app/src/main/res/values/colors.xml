@@ -7,4 +7,5 @@
     <color name="colorText">#000000</color>
     <color name="colorTextSecondary">#757575</color>
     <color name="colorButtonText">#FFFFFF</color>
+    <color name="purple_500">#6200EE</color> <!-- Added purple_500 -->
 </resources>

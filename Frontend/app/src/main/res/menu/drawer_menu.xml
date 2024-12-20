@@ -1,48 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+
     <group android:checkableBehavior="single">
+        <!-- Schedule -->
         <item
             android:id="@+id/nav_schedule"
             android:icon="@drawable/ic_schedule"
-            android:title="schedule" />
+            android:title="@string/menu_schedule" />
+
+        <!-- Day View -->
         <item
             android:id="@+id/nav_day"
             android:icon="@drawable/ic_day"
-            android:title="day" />
+            android:title="@string/menu_day" />
+
+        <!-- Week View -->
         <item
             android:id="@+id/nav_week"
             android:icon="@drawable/ic_week"
-            android:title="week" />
+            android:title="@string/menu_week" />
+
+        <!-- Month View -->
         <item
             android:id="@+id/nav_month"
             android:icon="@drawable/ic_month"
-            android:title="month" />
+            android:title="@string/menu_month" />
+
+        <!-- Location -->
         <item
             android:id="@+id/nav_location"
             android:icon="@drawable/ic_location"
-            android:title="location" />
+            android:title="@string/menu_location" />
+
+        <!-- Add Friends -->
         <item
             android:id="@+id/nav_add_friends"
             android:icon="@drawable/ic_add_friends"
-            android:title="friends" />
+            android:title="@string/menu_add_friends" />
+
+        <!-- Groups -->
         <item
             android:id="@+id/nav_groups"
             android:icon="@drawable/ic_groups"
-            android:title="groups" />
+            android:title="@string/menu_groups" />
+
+        <!-- Contacts -->
         <item
             android:id="@+id/nav_contacts"
             android:icon="@drawable/ic_contacts"
-            android:title="contacts" />
+            android:title="@string/menu_contacts" />
     </group>
 
-    <item android:title="other">
+    <!-- Settings -->
+    <item android:title="@string/menu_other">
         <menu>
             <item
                 android:id="@+id/nav_settings"
                 android:icon="@drawable/ic_settings"
-                android:title="settings" />
+                android:title="@string/menu_settings" />
         </menu>
     </item>
+
 </menu>
 
 
